@@ -1,10 +1,18 @@
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringHelperTest {
 
-    StringHelper helper = new StringHelper();
+    StringHelper helper;
+    @BeforeEach
+    public void before()
+    {
+         helper= new StringHelper();
+    }
+
 
     @Test
     void test_truncateAInFirst2Positions_A_in_2_pos()
